@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마인크래프트 주민 정보 - 페이지 1</title>
+  <style>
+    @font-face {
+      font-family: 'Galmuri11';
+      src: url('Galmuri11.ttf') format('truetype');
+    }
+
+    * {
+      font-family: 'Galmuri11', sans-serif !important;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: url('주민마을배경.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 160px;
+    }
+
+    .left-panel {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 20px;
+      position: relative;
+    }
+
+    .left-panel a {
+      position: relative;
+      margin-left: -30px;
+    }
+
+    .left-panel a:nth-child(1) {
+      z-index: 1;
+      opacity: 0.5;
+    }
+    .left-panel a:nth-child(2) {
+      z-index: 2;
+      opacity: 0.7;
+    }
+    .left-panel a:nth-child(3) {
+      z-index: 3;
+      opacity: 0.85;
+    }
+    .left-panel a:nth-child(4) {
+      z-index: 4;
+      opacity: 1;
+    }
+
+    .left-panel a img {
+      width: 130px;
+      height: auto;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .left-panel a img:hover {
+      transform: scale(1.05);
+    }
+
+    .center-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 500px;
+      min-width: 180px;
+    }
+
+    .center-panel button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 18px;
+      border: 2px solid #444;
+      box-shadow: inset -2px -2px 0 #222, inset 2px 2px 0 #666;
+      padding: 10px 20px;
+      cursor: pointer;
+      min-width: 100px;
+      transition: transform 0.2s;
+    }
+
+    .center-panel button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      transform: scale(1.05);
+    }
+
+    .right-panel {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .info-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 30px;
+      width: 280px;
+      height: 500px;
+      border: 2px solid #555;
+      box-shadow: inset -3px -3px 0 #222, inset 3px 3px 0 #777;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      background-image: url('05082037-2868-47c5-b4e6-55b30dee653c.png');
+      background-size: 60px;
+      background-repeat: repeat;
+      opacity: 0.98;
+    }
+
+    .info-box img {
+      width: 180px;
+      position: absolute;
+      top: -110px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .info-box .title {
+      font-size: 22px;
+      margin-bottom: 25px;
+      z-index: 1;
+    }
+
+    .info-box .stat {
+      font-size: 16px;
+      margin: 10px 0;
+      width: 100%;
+      text-align: left;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <img class="logo" src="로고.png" alt="로고">
+
+    <!-- 왼쪽 패널 -->
+    <div class="left-panel">
+      <a href="늪지.html"><img src="주민늪지.png" alt="늪지"></a>
+      <a href="정글.html"><img src="주민정글.png" alt="정글"></a>
+      <a href="사바나.html"><img src="주민사바나.png" alt="사바나"></a>
+      <a href="사막.html"><img src="주민사막.png" alt="사막"></a>
+    </div>
+
+    <!-- 중앙 패널 -->
+    <div class="center-panel">
+      <button onclick="window.location.href='주민페이지2.html'">스폰</button>
+      <button onclick="window.location.href='변종.html'">변종</button>
+      <button onclick="window.location.href='행동.html'">행동</button>
+      <button onclick="window.location.href='번식.html'">번식</button>
+      <button onclick="window.location.href='거래.html'">거래</button>
+    </div>
+
+    <!-- 오른쪽 패널 -->
+    <div class="right-panel">
+      <div class="info-box">
+        <img src="주민.png" alt="주민">
+        <div class="title">주민</div>
+        <div class="stat">생명력:        20 (❤ × 20)</div>
+        <div class="stat">행동:          수동적 몹</div>
+        <div class="stat">공격력:        ⚔ 5</div>
+        <div class="stat">히트박스:      ⬛ 1.95블록</div>
+        <div class="stat">생성:          🏡 마을</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
